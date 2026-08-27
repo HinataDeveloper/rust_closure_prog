@@ -1,0 +1,55 @@
+// Date: Thu Aug 28 2026
+
+// Project: Learning Chapter 13
+// Goal: Using closure
+// Dependency: Without dependency
+
+// Zed 1.17.2
+// Commit: c8e44cfa7bda9b2e22c8d6934d78969352e7f61a
+// Version: 1.17.2+stable.349.c8e44cfa7bda9b2e22c8d6934d78969352e7f61a
+
+// rustc 1.100.0-nightly (bff8e12ff 2026-08-26)
+// binary: rustc
+// commit-hash: bff8e12ff5e6bcd53dfb1dbccdcec80a60a856ed
+// commit-date: 2026-08-26
+// host: x86_64-unknown-linux-gnu
+// release: 1.100.0-nightly
+// LLVM version: 23.1.0
+
+// cargo 1.100.0-nightly (e8cb624d5 2026-08-22)
+// release: 1.100.0-nightly
+// commit-hash: e8cb624d5701824f46a2ec5873cfd59ee3d2f66c
+// commit-date: 2026-08-22
+// host: x86_64-unknown-linux-gnu
+// libgit2: 1.9.6 (sys:0.21.0 vendored)
+// libcurl: 8.21.0-DEV (sys:0.4.90+curl-8.21.0 vendored ssl:OpenSSL/3.6.3)
+// ssl: OpenSSL 3.6.3 9 Jun 2026
+// os: Ubuntu 26.4.0 (resolute) [64-bit]
+
+// Kernel Version: 7.0.0-30-generic
+// Firmware Version: 71CN51WW(V1.21)
+
+fn main() {
+    println!("\n");
+
+    // add_v1 is a function pointer
+    let add_v1: fn(u32) -> u32 = add_one_v1;
+
+    let result_one = add_v1(100);
+    let result_two = add_one_v2(add_v1, result_one);
+
+    println!("value of result one is: {}", result_one); // 101
+    println!("value of result two is: {}", result_two); // 103
+
+    println!("\nThe End ...\n");
+}
+
+fn add_one_v1(x: u32) -> u32 {
+    x + 1
+}
+
+fn add_one_v2(add: fn(u32) -> u32, y: u32) -> u32 {
+    // add(y) -> 102
+    // 102 +1
+    add(y) + 1
+}
