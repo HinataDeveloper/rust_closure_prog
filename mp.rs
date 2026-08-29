@@ -1,17 +1,13 @@
-// Date: Thu Aug 28 2026
+// Date: Thu Aug 29 2026
 
 // Project: Learning Chapter 13
 // Goal: Using closure
 // Dependency: Without dependency
 
-// Zed 1.17.2
-// Commit: c8e44cfa7bda9b2e22c8d6934d78969352e7f61a
-// Version: 1.17.2+stable.349.c8e44cfa7bda9b2e22c8d6934d78969352e7f61a
-
-// rustc 1.100.0-nightly (bff8e12ff 2026-08-26)
+// rustc 1.100.0-nightly (17fd5b8a3 2026-08-28)
 // binary: rustc
-// commit-hash: bff8e12ff5e6bcd53dfb1dbccdcec80a60a856ed
-// commit-date: 2026-08-26
+// commit-hash: 17fd5b8a37b6667b6cc137f3cc35f09759768a3b
+// commit-date: 2026-08-28
 // host: x86_64-unknown-linux-gnu
 // release: 1.100.0-nightly
 // LLVM version: 23.1.0
@@ -24,9 +20,9 @@
 // libgit2: 1.9.6 (sys:0.21.0 vendored)
 // libcurl: 8.21.0-DEV (sys:0.4.90+curl-8.21.0 vendored ssl:OpenSSL/3.6.3)
 // ssl: OpenSSL 3.6.3 9 Jun 2026
-// os: Ubuntu 26.4.0 (resolute) [64-bit]
+// os: Fedora 44.0.0 [64-bit]
 
-// Kernel Version: 7.0.0-30-generic
+// Kernel Version: 7.1.10-200.fc44.x86_64
 // Firmware Version: 71CN51WW(V1.21)
 
 fn main() {
