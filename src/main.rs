@@ -28,5 +28,7 @@
 fn main() {
     println!("\n");
 
+    println!("This is test");
+
     println!("\nThe End ...\n");
 }
