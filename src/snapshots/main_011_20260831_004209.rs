@@ -25,8 +25,49 @@
 // Kernel Version: 7.1.10-200.fc44.x86_64
 // Firmware Version: 71CN51WW(V1.21)
 
+use crate::Select::{Invalid, Valid};
+
 fn main() {
     println!("\n");
 
+    let value = 690;
+    let raphael = Valid(120);
+
+    let result = raphael.unwrap_or_else(move || {
+        println!("Step One: I captured value variable ...");
+        value
+    });
+
+    println!("value of result is: {}", result);
+    println!("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+    // -----------------------------------------------
+
+    let samuel = Invalid;
+
+    let result_two = samuel.unwrap_or_else(move || {
+        println!("Step Two: I captured value variable ...");
+        value
+    });
+
+    println!("value of result_two is: {}", result_two);
+
     println!("\nThe End ...\n");
+}
+
+enum Select {
+    Valid(i32),
+    Invalid,
+}
+
+impl Select {
+    fn unwrap_or_else<F>(self, f: F) -> i32
+    where
+        F: FnOnce() -> i32,
+    {
+        match self {
+            Self::Valid(x) => x,
+            Self::Invalid => f(),
+        }
+    }
 }
