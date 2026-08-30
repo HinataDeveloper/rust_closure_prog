@@ -31,4 +31,5 @@ fn main() {
     println!("This is test");
 
     println!("\nThe End ...\n");
+    println!("\nThe End ...\n");
 }
