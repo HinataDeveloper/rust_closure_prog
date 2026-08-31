@@ -1,4 +1,4 @@
-// Date: Thu Aug 29 2026
+// Date: Thu Aug 31 2026
 
 // Project: Learning Chapter 13
 // Goal: Using closure
@@ -28,8 +28,5 @@
 fn main() {
     println!("\n");
 
-    println!("This is test");
-
-    println!("\nThe End ...\n");
     println!("\nThe End ...\n");
 }
