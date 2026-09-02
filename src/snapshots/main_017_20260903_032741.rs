@@ -1,7 +1,7 @@
 // Date: Thu Sep 03 2026
 
 // Project: Learning Chapter 13
-// Goal: Using Interator
+// Goal: Using Iterator
 // Dependency: Without dependency
 
 // rustc 1.100.0-nightly (5db7f4be8 2026-09-01)
@@ -27,6 +27,14 @@
 
 fn main() {
     println!("\n");
+
+    let number_list = vec![1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+    let v1_iter = number_list.iter();
+
+    for item in v1_iter {
+        println!("current value is: {}", item);
+    }
 
     println!("\nThe End ...\n");
 }
