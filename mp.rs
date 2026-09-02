@@ -1,13 +1,13 @@
-// Date: Thu Sep 02 2026
+// Date: Thu Sep 03 2026
 
 // Project: Learning Chapter 13
-// Goal: Using closure
+// Goal: Using Interator
 // Dependency: Without dependency
 
-// rustc 1.100.0-nightly (17fd5b8a3 2026-08-28)
+// rustc 1.100.0-nightly (5db7f4be8 2026-09-01)
 // binary: rustc
-// commit-hash: 17fd5b8a37b6667b6cc137f3cc35f09759768a3b
-// commit-date: 2026-08-28
+// commit-hash: 5db7f4be8a36c1b8ae19299469e2be2b0f052c21
+// commit-date: 2026-09-01
 // host: x86_64-unknown-linux-gnu
 // release: 1.100.0-nightly
 // LLVM version: 23.1.0
