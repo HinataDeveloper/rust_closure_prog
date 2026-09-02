@@ -28,5 +28,42 @@
 fn main() {
     println!("\n");
 
+    let mut rec_arr = [
+        Rectangle {
+            width: 12,
+            height: 22,
+        },
+        Rectangle {
+            width: 35,
+            height: 10,
+        },
+        Rectangle {
+            width: 46,
+            height: 15,
+        },
+        Rectangle {
+            width: 15,
+            height: 44,
+        },
+        Rectangle {
+            width: 13,
+            height: 33,
+        },
+    ];
+
+    rec_arr.sort_by_key(|r| r.width);
+    println!("rectangle list is: {:?}", rec_arr);
+
+    println!("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+    rec_arr.sort_by_key(|r| r.height);
+    println!("rectangle list is: {:?}", rec_arr);
+
     println!("\nThe End ...\n");
+}
+
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
 }
