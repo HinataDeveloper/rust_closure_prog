@@ -22,7 +22,7 @@
 // ssl: OpenSSL 3.6.3 9 Jun 2026
 // os: Fedora 44.0.0 [64-bit]
 
-// Kernel Version: 7.1.10-200.fc44.x86_64
+// Kernel Version: 7.1.12-200.fc44.x86_64
 // Firmware Version: 71CN51WW(V1.21)
 
 fn main() {
