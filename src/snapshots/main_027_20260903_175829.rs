@@ -1,0 +1,95 @@
+// Date: Thu Sep 03 2026
+
+// Project: Learning Chapter 13
+// Goal: Using Interator
+// Dependency: Without dependency
+
+// rustc 1.100.0-nightly (5db7f4be8 2026-09-01)
+// binary: rustc
+// commit-hash: 5db7f4be8a36c1b8ae19299469e2be2b0f052c21
+// commit-date: 2026-09-01
+// host: x86_64-unknown-linux-gnu
+// release: 1.100.0-nightly
+// LLVM version: 23.1.0
+
+// cargo 1.100.0-nightly (e8cb624d5 2026-08-22)
+// release: 1.100.0-nightly
+// commit-hash: e8cb624d5701824f46a2ec5873cfd59ee3d2f66c
+// commit-date: 2026-08-22
+// host: x86_64-unknown-linux-gnu
+// libgit2: 1.9.6 (sys:0.21.0 vendored)
+// libcurl: 8.21.0-DEV (sys:0.4.90+curl-8.21.0 vendored ssl:OpenSSL/3.6.3)
+// ssl: OpenSSL 3.6.3 9 Jun 2026
+// os: Fedora 44.0.0 [64-bit]
+
+// Kernel Version: 7.1.12-200.fc44.x86_64
+// Firmware Version: 71CN51WW(V1.21)
+
+fn main() {
+    println!("\n");
+
+    println!("Using test case for filter() method");
+
+    println!("\nThe End ...\n");
+}
+
+#[derive(PartialEq, Debug)]
+struct Shoe {
+    size: u32,
+    style: String,
+}
+
+fn shoes_in_size(shoes: Vec<Shoe>, size: u32) -> Vec<Shoe> {
+    shoes.into_iter().filter(|s| s.size == size).collect()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn filters_by_size() {
+        let shoes_vec = vec![
+            Shoe {
+                size: 10,
+                style: String::from("style one"),
+            },
+            Shoe {
+                size: 12,
+                style: String::from("style two"),
+            },
+            Shoe {
+                size: 10,
+                style: String::from("style three"),
+            },
+            Shoe {
+                size: 10,
+                style: String::from("style four"),
+            },
+            Shoe {
+                size: 16,
+                style: String::from("style five"),
+            },
+        ];
+
+        let size_filter = shoes_in_size(shoes_vec, 10);
+
+        assert_eq!(
+            size_filter,
+            vec![
+                Shoe {
+                    size: 10,
+                    style: String::from("style one"),
+                },
+                Shoe {
+                    size: 10,
+                    style: String::from("style three"),
+                },
+                Shoe {
+                    size: 10,
+                    style: String::from("style four"),
+                },
+            ]
+        );
+    }
+}
