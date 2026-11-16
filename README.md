@@ -1,2 +1,1 @@
-# Rust Closure Programming
-Learning Closure Programming in Rust
+# Learning Closure in Rust Programming Language.
